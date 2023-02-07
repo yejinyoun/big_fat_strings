@@ -61,14 +61,14 @@ function process() {
     console.log(output);
   }
 
-  /* If input is a full name: Find the length of the first name */
+  /* 3. If input is a full name: Find the length of the first name */
 
   if (option == 3) {
     output = input.substring(0, input.indexOf(" ")).length;
     console.log(output);
   }
 
-  /* If input is a full name: Find the middle name start and end position, 
+  /* 4. If input is a full name: Find the middle name start and end position, 
 and the middle name itself in a full name string */
 
   if (option == 4) {
@@ -80,7 +80,7 @@ and the middle name itself in a full name string */
 
     console.log(output);
   }
-  /* If input is a filename: Check if a filename is .png or .jpg */
+  /* 5. If input is a filename: Check if a filename is .png or .jpg */
 
   if (option == 5) {
     if (input.endsWith(".png") == true) {
@@ -92,6 +92,22 @@ and the middle name itself in a full name string */
     }
     console.log(output);
   }
+
+  /* 6. If input is a password: Hide a password with the correct number of *s */
+
+  if (option == 6) {
+    output = "*".repeat(input.length);
+
+    console.log(output);
+  }
+
+  /* 7. With any input: Make the third character uppercase */
+  if (option == 7) {
+    output = input.substring(0, 2) + input.substring(2, 3).toUpperCase() + input.substring(3);
+    console.log(output);
+  }
+
+  /* With any input: Make a character uppercase, if it follows a space or a hyphen */
 }
 
 function showOutput() {
