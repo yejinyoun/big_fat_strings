@@ -140,11 +140,9 @@ and the middle name itself in a full name string */
 }
 
 function showOutput() {
-  let result = document.querySelector("#output").value;
+  document.querySelector("#output").value = output;
 
-  result = output;
-
-  console.log(result);
+  console.log(output);
 
   init();
 }
