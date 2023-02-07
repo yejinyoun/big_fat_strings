@@ -5,9 +5,9 @@ If input is a full name: Find the first name-
 If input is a full name: Find the length of the first name-
 
 If input is a full name: Find the middle name start and end position, 
-and the middle name itself in a full name string
+and the middle name itself in a full name string-
 
-If input is a filename: Check if a filename is .png or .jpg
+If input is a filename: Check if a filename is .png or .jpg-
 
 If input is a password: Hide a password with the correct number of *s
 
@@ -78,6 +78,18 @@ and the middle name itself in a full name string */
 
     output = `The middle name starts at index ${middleNameStart}, ends at ${middleNameEnd} and it is ${middleName}`;
 
+    console.log(output);
+  }
+  /* If input is a filename: Check if a filename is .png or .jpg */
+
+  if (option == 5) {
+    if (input.endsWith(".png") == true) {
+      output = "It's an png image!";
+    } else if (input.endsWith(".jpg") == true) {
+      output = "It's an jpg image!";
+    } else {
+      output = "It's not an image!";
+    }
     console.log(output);
   }
 }
