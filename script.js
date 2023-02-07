@@ -107,9 +107,33 @@ and the middle name itself in a full name string */
     console.log(output);
   }
 
-  /* With any input: Make a character uppercase, if it follows a space or a hyphen */
+  /* 8. With any input: Make a character uppercase, if it follows a space or a hyphen */
+  if (option == 8) {
+    if (input.includes(" ") == true) {
+      output =
+        input.substring(0, input.indexOf(" ") + 1) +
+        input.substring(input.indexOf(" ") + 1, input.indexOf(" ") + 2).toUpperCase() +
+        input.substring(input.indexOf(" ") + 2);
+
+      console.log(output);
+    }
+  }
 }
 
 function showOutput() {
+  let result = document.querySelector("#output").value;
+
+  result = output;
+
+  console.log(result);
+
   init();
 }
+
+/* number 8 does not work - if there is middlename & lastname, it only works for the first one w space or hyphen
+also idk how to make it work for both space and hypen. - if else didnt work
+
+show output.. idk how
+it doesn't show
+
+*/
