@@ -108,7 +108,7 @@ and the middle name itself in a full name string */
   }
 
   /* 8. With any input: Make a character uppercase, if it follows a space or a hyphen */
-  if (option == 8) {
+  /* if (option == 8) {
     if (input.includes(" ") == true) {
       output =
         input.substring(0, input.indexOf(" ") + 1) +
@@ -116,7 +116,26 @@ and the middle name itself in a full name string */
         input.substring(input.indexOf(" ") + 2);
 
       console.log(output);
+    } */
+
+  if (option == 8) {
+    /* defining a loop of checking and printing letter by letter 
+  last index is length -1 because it starts from 0.
+  */
+
+    output = input.substring(0, 1);
+    for (let i = 1; i < input.length; i++) {
+      let letter = input.substring(i, i + 1);
+
+      /* checking if the previous character was space or hyphen */
+      if (input.substring(i - 1, i) == " " || input.substring(i - 1, i) == "-") {
+        output += letter.toUpperCase();
+      } else {
+        /* if not just print out as it is */
+        output += letter;
+      }
     }
+    console.log(output);
   }
 }
 
