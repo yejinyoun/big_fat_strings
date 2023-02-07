@@ -2,7 +2,7 @@
 
 If input is a full name: Find the first name-
 
-If input is a full name: Find the length of the first name
+If input is a full name: Find the length of the first name-
 
 If input is a full name: Find the middle name start and end position, 
 and the middle name itself in a full name string
@@ -65,6 +65,19 @@ function process() {
 
   if (option == 3) {
     output = input.substring(0, input.indexOf(" ")).length;
+    console.log(output);
+  }
+
+  /* If input is a full name: Find the middle name start and end position, 
+and the middle name itself in a full name string */
+
+  if (option == 4) {
+    let middleNameStart = input.indexOf(" ") + 1;
+    let middleNameEnd = input.indexOf(" ", input.indexOf(" ") + 1) - 1;
+    let middleName = input.substring(middleNameStart, middleNameEnd + 1);
+
+    output = `The middle name starts at index ${middleNameStart}, ends at ${middleNameEnd} and it is ${middleName}`;
+
     console.log(output);
   }
 }
